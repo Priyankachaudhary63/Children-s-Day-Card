@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's-Day-Card</title>
+
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #239ac2;
+    }
+    .childrendayCard{
+        position: relative;
+        width: 250px;
+        height: 350px;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transform: perspective(2500px);
+        transition: 1s;
+    }
+    .childrendayCard:hover{
+        transform: perspective(2500px) rotate(5deg);
+        box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 0 10px 100px rgba(0,0,0,0.5);
+    }
+    .childrendayCard:hover .cardfront{
+        transform: rotateY(-160deg);
+    }
+    .childrendayCard:hover .happy{
+        visibility: hidden;
+    }
+    .cardfront{
+        position: relative;
+        background-color: #fff;
+        width: 250px;
+        height: 350px;
+        overflow: hidden;
+        transform-origin: left;
+        box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+        transition: 0.6s;
+    }
+    .happy{
+        font-family:  Tahoma, sans-serif;
+        text-align: center;
+        margin: 30px;
+        background-image: linear-gradient(120deg,#ffd856 0%, #f98c6e 100%);
+        transition: 0.1s;
+    }
+    .balloons{
+        position: absolute;
+    }
+    .balloons-1,
+    .balloons-2,
+    .balloons-3,
+    .balloons-4{
+        position: absolute;
+        width: 85px;
+        height: 95px;
+        border-radius: 50%;
+    }
+    .balloons-1{
+        background-color: rgba(255,40,90,0.7);
+        left: -10px;
+        
+        margin-top: 50px;
+    }
+    .balloons-2{
+        background-color: rgba(9,215,160,0.7);
+        left: 50px;
+        margin-top: 20px;
+    }
+    .balloons-3{
+        background-color: rgba(255,186,26,0.7);
+        left: 110px;
+        margin-top: 50px;
+    }
+    .balloons-4{
+        background-color: rgba(12,122,159,0.7);
+        left: 170px;
+        margin-top: 50px;
+    }
+    .balloons-1::before,
+    .balloons-2::before,
+    .balloons-3::before,
+    .balloons-4::before{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 155px;
+      background-color: #ffc848;
+      top: 95px;
+      left: 43px;
+    }
+    .balloons-1::after,
+    .balloons-2::after,
+    .balloons-3::after,
+    .balloons-4::after{
+        content: "";
+        position: absolute;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        top: 94px;
+        left:37px ;
+    }
+    .balloons-1::after{
+        border-bottom: 10px solid #ff3e6b;
+    }
+    .balloons-2::after{
+        border-bottom: 10px solid #04b183;
+    }
+    .balloons-3::after{
+        border-bottom: 10px solid #ffc94c;
+    }
+    .balloons-4::after{
+        border-bottom: 10px solid #13a9bd;
+    }
+    .cardinside{
+        position: absolute;
+        background-color: #fff;
+        width: 250px;
+        height: 350px;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+
+    }
+    p{
+        font-family: "Brush Script MT",cursive;
+        margin: 40px;
+        color: #333;
+    }
+    .name{
+        position: absolute;
+        left: 150px;
+        top: 200px;
+        color: #333;
+    }
+    .back{
+        font-family: Tahoma,sans-serif;
+        color: #333;
+        text-align: center;
+        margin: 30px;
+        outline-color: #333;
+        outline-style:dotted ;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="childrendayCard">
+        <div class="cardfront">
+            <h3 class="happy">HAPPY CHILDREN'S DAY</h3>
+            <div class="balloons-1"></div>
+            <div class="balloons-2"></div>
+            <div class="balloons-3"></div>
+            <div class="balloons-4"></div>
+        </div>
+        <div class="cardinside">
+            <h3 class="back">HAPPY CHILDREN'S DAY</h3>
+            <P>Dear Students,</P>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos consectetur eius dolorum reiciendis quam fugit soluta sequi dolore, aliquam doloremque.</p>
+            <p class="name">XXX</p>
+        </div>
+    </div>
+</body>
+</html>
